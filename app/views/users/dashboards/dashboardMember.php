@@ -113,19 +113,24 @@
                     <h4 class=sub-title id=myProjects>Projects</h4>
                     <table class='teamTable'>
                     <tr>
+                        <th style='width:30px;'></th>
                         <th>Project Name</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
+                        <th>Duration</th>
                         <th>Description</th>
                         <th>Status</th>
                         <th>Product Owner</th>
                     </tr>";
                 foreach ($data['projects'] as $project) {
+                    $dateStart = new DateTime($project->date_start);
+                    $dateEnd = new DateTime($project->date_end);
+
+                    $interval = $dateStart->diff($dateEnd);
+
                     echo "
                         <tr>
+                            <td style='width:30px;' title='Tasks'><a href='".URLROOT."/tasks/index/".$project->id."'><i class='fa-solid fa-bars-staggered' style='color: #308be6;'></i></a></td>
                             <td>{$project->name}</td>
-                            <td>{$project->date_start}</td>
-                            <td>{$project->date_end}</td>
+                            <td>{$interval->format('%a days')}</td>
                             <td>{$project->description}</td>
                             <td>";
                     echo ($project->status === 0) ? '<p  class=active>● Active</p>' : '<p class=done>✔ Done</p></td>';

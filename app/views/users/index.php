@@ -23,7 +23,7 @@
         <div class="right">
             <h4 class="title">LogIn</h4>
             <p>Welcome back! Please login to your account.</p>
-            <form action="<?php echo URLROOT; ?>/userController/login" method="post">
+            <form action="<?php echo URLROOT; ?>/users/login" method="post">
                 <label for="email">
                     <h4>Email</h4>
                     <input type="email" name="email" id="email" placeholder="example@gmail.com" required >

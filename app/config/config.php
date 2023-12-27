@@ -7,6 +7,6 @@ define('DB_NAME', 'dataware_v4');
 //APP root
 define('APPROOT', dirname(dirname(__FILE__)));
 //URL root
-define('URLROOT', 'http://localhost/brief-08');
+define('URLROOT', 'http://localhost/brief-09');
 //Site name
 define('SITENAME', 'DataWare');

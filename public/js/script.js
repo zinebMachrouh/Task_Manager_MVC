@@ -33,3 +33,4 @@ function openSMPopup(teamId) {
 function closeSMPopup() {
     document.getElementById('SMpopup').style.display = 'none';
 }
+
