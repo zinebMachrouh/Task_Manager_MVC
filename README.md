@@ -1,70 +1,59 @@
-# Système de Gestion des Ressources Humaines DataWare
+# Task Manager - MVC PHP Application
 
-Bienvenue dans le projet du Système de Gestion des Ressources Humaines (GRH) de DataWare ! Ce système a pour objectif de révolutionner la gestion du personnel pour DataWare, en fournissant une interface conviviale et des fonctionnalités robustes. Le projet implique l'utilisation des langages PHP et SQL pour les opérations côté serveur, ainsi que HTML, CSS et des frameworks CSS pour le développement côté client.
+## Introduction
 
-## Aperçu du Projet
+Welcome to the Task Manager, a simple web application built using the Model-View-Controller (MVC) architecture in PHP, enhanced with CSS for styling and Ajax for seamless interaction. This application allows users to manage their tasks efficiently, providing a user-friendly interface for adding, editing, and deleting tasks.
 
-### Mission
+## Features
 
-Votre mission, si vous choisissez de l'accepter, consiste à créer un système complet de gestion des ressources humaines qui réponde aux exigences spécifiques de DataWare. Cela inclut la conception de diagrammes UML, la rédaction de requêtes SQL, la mise en œuvre de pratiques sécurisées et le développement d'une interface visuellement attrayante.
+1. **User Authentication:** Users can register and log in securely to manage their tasks. 🔐
 
-## Composants du Projet
+2. **Task Management:**
+   - Add tasks with details such as title, description, and due date. 📝
+   - Edit existing tasks to update information. ✏️
+   - Delete tasks when they are no longer needed. 🗑️
 
-1. **Diagrammes UML :**
-   - Diagramme de Cas d'Utilisation : Illustre les interactions entre les utilisateurs et le système.
-   - Diagramme de Classe : Représente la structure des classes du système et leurs relations.
-   - Diagramme de Séquence : Dépeint la séquence des actions dans différentes situations.
+3. **Responsive Design:** The application is designed to work seamlessly across various devices, ensuring a consistent experience for users. 📱
 
-2. **Requêtes SQL :**
-   - Créer, modifier et supprimer des projets.
-   - Assigner des Scrum Masters à des projets avec des rôles définis.
-   - Gérer la création, la modification et la suppression d'équipes.
-   - Ajouter ou supprimer des membres d'équipe selon les besoins.
-   - Affecter des équipes à des projets spécifiques pour une allocation optimale des ressources.
+4. **Ajax Integration:** Tasks can be added, edited, and deleted without reloading the entire page, providing a smooth and dynamic user experience. 🔄
 
-3. **Mesures de Sécurité :**
-   - Sécuriser les requêtes SQL pour éviter les injections SQL.
-   - Garantir la robustesse et la sécurité du système.
+## Installation
 
-4. **Conception de l'Interface :**
-   - Utiliser HTML et CSS pour créer une interface utilisateur intuitive et visuellement attrayante.
-   - Incorporer des frameworks CSS pour une expérience utilisateur améliorée.
+1. Clone the repository to your local machine
 
-5. **Implémentation PHP :**
-   - Développer du code PHP pour intégrer les fonctionnalités requises dans l'interface.
+2. Configure your web server to point to the `public` directory as the root.
 
-## Histoires d'Utilisateurs
+3. Import the database schema from the `database.sql` file into your MySQL database.
 
-1. **Authentification de l'Utilisateur :**
-   - En tant qu'utilisateur, je souhaite m'inscrire et m'authentifier en utilisant un identifiant et un mot de passe pour accéder à la plateforme.
+4. Copy the `config/config.example.php` file to `config/config.php` and update the database connection details.
 
-2. **Aperçu des Projets et des Équipes :**
-   - En tant qu'utilisateur, je souhaite consulter mes projets et mes équipes.
+5. Open the application in your web browser.
 
-3. **Gestion de Projets :**
-   - En tant que Product Owner, je souhaite créer, modifier et supprimer des projets pour répondre aux évolutions des besoins de l'entreprise.
+## Technologies Used
 
-4. **Responsabilités du Scrum Master :**
-   - En tant que Product Owner, je veux assigner des Scrum Masters à des projets spécifiques et définir leurs rôles.
+- **PHP:** The backend logic and server-side scripting are implemented in PHP. 🐘
 
-5. **Gestion des Équipes :**
-   - En tant que Scrum Master, je veux pouvoir gérer la création, la modification et la suppression d'équipes pour garantir une organisation efficace.
+- **MySQL:** Database management is handled using MySQL to store task-related information. 🛢️
 
-6. **Gestion des Membres de l'Équipe :**
-   - En tant que Scrum Master, j'ai besoin d'ajouter ou supprimer des membres de l'équipe pour ajuster les effectifs selon les besoins.
+- **HTML and CSS:** The frontend structure and styling are implemented using HTML and CSS to provide an intuitive user interface. 🎨
 
-7. **Allocation des Ressources :**
-   - En tant que Scrum Master, je désire affecter des équipes à des projets spécifiques pour une répartition optimale des ressources.
+- **Ajax:** Asynchronous JavaScript and XML are used to update the content dynamically without reloading the entire page. 🌐
 
-## Mise en Route
+## MVC Structure
 
-Pour configurer et exécuter le Système de Gestion des Ressources Humaines DataWare, suivez ces étapes :
+The application follows the MVC architecture for better organization and separation of concerns:
 
-1. Clonez le dépôt sur votre machine locale.
-2. Configurez un environnement serveur local (par exemple, XAMPP, WAMP) pour PHP et MySQL.
-3. Importez le schéma de la base de données fourni dans le fichier `dataware_v2.sql`.
-4. Configurez la connexion à la base de données dans les fichiers PHP.
-5. Exécutez l'application sur votre serveur local.
+- **Model:** Manages the data and database interactions.
+  
+- **View:** Represents the user interface and displays information to the user.
+  
+- **Controller:** Handles user input, processes requests, and interacts with the model to update the data.
 
 
-Merci de faire partie de ce projet passionnant !
+## Acknowledgments
+
+- The Task Manager was inspired by the need for a simple yet effective task management solution.
+  
+- Special thanks to the PHP, MySQL, and Ajax communities for their valuable contributions.
+
+Feel free to explore, use, and contribute to make the Task Manager even better! 🚀
